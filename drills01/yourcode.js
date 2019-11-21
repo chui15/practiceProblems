@@ -11,12 +11,14 @@ function sumArray(array){
 }
 
 function fitWithinVal(array, val){
-  var sum = 0;
+  var sum2 = 0;
   var output = [];
   for (var j = 0; j < array.length; j++){
-    while (sum < val && array[j] < val){
-      sum += array[j];
+    sum2 += array[j];
+    if (sum2 < val){
       output.push(array[j]);
+    } else {
+      sum2 -= array[j];
     }
   }
   return output;
