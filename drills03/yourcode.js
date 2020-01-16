@@ -7,7 +7,6 @@ function getPath(array){
 
 function getPathParts(array){
   var parts = getPath(array);
-  console.log(parts);
   var portPosition = parts[2].indexOf(':');
   var host = parts[2].slice(0, portPosition);
   var port = Number.parseInt((parts[2].slice(portPosition+1)));
@@ -21,8 +20,14 @@ function getPathParts(array){
   return output;
 }
 
-function getCapitalCount(){
-
+function getCapitalCount(array){
+  var output = 0;
+  for (var i = 0; i < array.length; i++) {
+    if (array[i][0] === array[i][0].toUpperCase()) {
+      output++;
+    }
+  }
+  return output;
 }
 
 function correctCalcChecker(){
