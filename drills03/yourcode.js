@@ -31,7 +31,6 @@ function getCapitalCount(array){
 }
 
 function correctCalcChecker(){
-
 }
 
 function doMath(){
